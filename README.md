@@ -1,4 +1,6 @@
-# proyectooptimizacion.github.io
+# proyectooptimizacion
+
+#Descripción 
 
 # Miembros 
 ## Lena Carolina Castillo De la Espriella
