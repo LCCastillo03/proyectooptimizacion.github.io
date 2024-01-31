@@ -1,4 +1,4 @@
-# proyectooptimizacion.gitbub.io
+# proyectooptimizacion.github.io
 
 #Descripción 
 
