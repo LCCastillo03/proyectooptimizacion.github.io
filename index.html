@@ -278,13 +278,17 @@ body, html {
   <div style="margin-top:48px">
 <div class="w3-container ">
    <li> <strong> Your objectives for estimation using the provided data </strong> </li>
-The main objective is to develop a predictive model capable of estimating the geographic location (country) of the Passer domesticus species based on climatic and temporal variables. This would allow for a better understanding of how environmental factors, such as temperature, precipitation, and seasonality, influence migratory patterns and the spatial distribution of this bird species. Additionally, the model could be used to make predictions about the potential presence of the species in different regions, which would be valuable for ecological and conservation studies.
+Our primary goal is to build a predictive model capable of estimating the geographic location (country) of the Passer domesticus species based on climatic and temporal variables. This endeavor aims to deepen our understanding of how environmental factors, such as temperature, precipitation, and seasonality, influence the migratory patterns and spatial distribution of this bird species. Additionally, the model could facilitate predictions regarding the potential presence of the species in different regions, which would prove invaluable for ecological and conservation studies.
 
   <li> <strong> Details about your initial model selection </strong></li>
-The initial selection of the multinomial logistic regression model is based on the nature of the target variable, which is the numerical code of the country. With multiple possible classes (countries), multinomial logistic regression is capable of handling this multiclass classification problem appropriately. 
+The initial choice of the multinomial logistic regression model was driven by the nature of the target variable, which is the numerical code representing the country. Given the presence of multiple possible classes (countries), multinomial logistic regression is well-suited to address this multiclass classification problem effectively.
 
  <li> <strong> Information on validation methods and the metrics employed </strong></li>
-The validation method used is data splitting into training and testing sets. By separating a portion of the data as a test set, a more realistic estimate of the model's performance on unseen data during training can be obtained, helping to avoid overfitting. The metric used is accuracy, which is a widely used metric for classification problems. Accuracy measures the fraction of correct predictions out of the total predictions made by the model. 
+<ol type="a">
+  <li><strong>Precision:</strong> Precision measures the accuracy of positive predictions for each class. For example, class 1 has a precision of 0.63, indicating that 63% of instances predicted as class 1 were correct. However, precision is low or zero for many other classes, suggesting challenges in accurately predicting these classes.</li>
+  <li><strong>Recall:</strong> Recall reflects the model's ability to correctly identify all instances of a class. A recall of 0.91 for class 1 means that 91% of actual class 1 instances were predicted correctly. Other classes have low or zero recall values, indicating that many instances of these classes were missed by the model. </li>
+  <li> <strong>F1-score:</strong> The F1-score is the harmonic mean of precision and recall, providing a balanced measure of a model's performance. Higher F1-scores indicate better balance between precision and recall. Some classes have reasonable F1-scores (e.g., class 1 with an F1-score of 0.74), while others have F1-scores of 0 due to zero precision or recall.</li>
+</ol>
 
  <li> <strong> Preliminary conclusions drawn from your analysis to date. </strong></li>
 <ol type="a">
@@ -296,8 +300,8 @@ The validation method used is data splitting into training and testing sets. By 
   </div>
  
 <div>
-    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/preview.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 1">
-    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/preview2.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 2">
+    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/corr.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 1">
+    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/cfmatrix.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 2">
     <div style="clear: both;"></div>
 </div>
 
@@ -352,4 +356,3 @@ function w3_close() {
 
 </body>
 </html>
-
