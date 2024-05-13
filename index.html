@@ -312,12 +312,43 @@ The initial choice of the multinomial logistic regression model was driven by th
 </div>
 
 
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">MACHINE LEARNING </h3>
+  <p class="w3-center w3-large">Selection II</p>
+  <div style="margin-top:48px">
+<div class="w3-container ">
+   <li> <strong> Details about your initial model selection </strong> </li>
+<ol type="a">
+<li> The dataset was structured to handle both presence and absence data of a species. Absence data points were generated within defined geographic coordinates <kbd>(`lat`, `lon`)</kbd> and distance constraints from valid locations represented in a raster map <kbd>(`map`)</kbd>. This process likely involved ensuring a balanced representation of absence data relative to the presence data.
+<li> The cross-validation process involved training and evaluating the model using a binomial classification task, where the goal was to distinguish between presence and absence of the species based on relevant features and spatial attributes.
+<li> Each iteration of the 5 fold cross-validation involved using a subset of the data for model training and the remaining portions for model validation. This rotating validation strategy allowed us to assess the model's performance across different subsets of the data and ensure its robustness in predicting both presence and absence scenarios
+</ol>
+
+ <li> <strong> Information on validation methods and the metrics employed </strong></li>
+The evaluation metrics used to assess model performance included <kbd>accuracy</kbd> as the primary metric. Accuracy is calculated as the number of correct predictions divided by the total number of predictions made.
+
+
+ <li> <strong> Preliminary conclusions drawn from your analysis to date. </strong></li>
+ The visualization highlighted different migration patterns of the Passer Domesticus species, between the months of May and September, fluctuations in both maximum and minimum temperatures indicate dynamic environmental conditions, therefore, we can conclude that temperature changes influence in the behavior and movement of Passer domesticus, which could affect breeding, feeding or migration activities.
+
+Understanding these relationships through visualization offers valuable insights into the ecological dynamics and behavioral responses of Passer domesticus to seasonal changes. This visualization serves as a powerful tool for studying avian migration patterns and their correlation with environmental factors over time.
+ 
+ <li> <strong> How does this model compare to the first one in terms of metrics? </strong></li>
+
+The seconf model (93.04% accuracy) demonstrates significantly superior performance in terms of accuracy compared to the first model (60% accuracy). The difference in metrics suggests that the second model is more effective at making accurate predictions on the test data compared to the first model.
+</div>
+  </div>
+<div>
+    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/enero.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 1">
+    <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/mayo.png" style="width: 50%; height: auto; float: left;" onclick="onClick(this)" class="img-fluid w3-hover-opacity" alt="Graph 2">
+    <div style="clear: both;"></div>   
+</div>    
     
     
-    <!-- Image of location/map  class="w3-image w3-greyscale"-->
+    <!-- Image of location/map  class="w3-image w3-greyscale"
     <img src="https://raw.githubusercontent.com/LCCastillo03/proyectooptimizacion.github.io/main/NYview.jpg"  style="width:100%;margin-top:48px">
   </div>
-</div>
+</div>-->
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
