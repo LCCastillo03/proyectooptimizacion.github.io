@@ -321,12 +321,17 @@ The initial choice of the multinomial logistic regression model was driven by th
 <ol type="a">
 <li> The dataset was structured to handle both presence and absence data of a species. Absence data points were generated within defined geographic coordinates <kbd>(`lat`, `lon`)</kbd> and distance constraints from valid locations represented in a raster map <kbd>(`map`)</kbd>. This process likely involved ensuring a balanced representation of absence data relative to the presence data.
 <li> The cross-validation process involved training and evaluating the model using a binomial classification task, where the goal was to distinguish between presence and absence of the species based on relevant features and spatial attributes.
-<li> Each iteration of the 5 fold cross-validation involved using a subset of the data for model training and the remaining portions for model validation. This rotating validation strategy allowed us to assess the model's performance across different subsets of the data and ensure its robustness in predicting both presence and absence scenarios
+<li> Each iteration of the 5 fold cross-validation involved using a subset of the data for model training and the remaining portions for model validation. This rotating validation strategy allowed us to assess the model's performance across different subsets of the data and ensure its robustness in predicting both presence and absence scenarios.
 </ol>
 
  <li> <strong> Information on validation methods and the metrics employed </strong></li>
 The evaluation metrics used to assess model performance included <kbd>accuracy</kbd> as the primary metric. Accuracy is calculated as the number of correct predictions divided by the total number of predictions made.
-
+<ol type="a">
+<li> <kbd>Random Forest (RF) 5-fold Cross Validation Accuracy</kbd>: 93.04% (+/- 11.72)
+<li> <kbd>Extra Trees (ET) 5-fold Cross Validation Accuracy:</kbd> 94.23% (+/- 8.79)
+<li> <kbd>XGBoost (XGB) 5-fold Cross Validation Accuracy:</kbd> 94.07% (+/- 8.32)
+<li> <kbd>LightGBM (LGBM) 5-fold Cross Validation Accuracy:</kbd> 93.64% (+/- 8.45)
+</ol>
 
  <li> <strong> Preliminary conclusions drawn from your analysis to date. </strong></li>
  The visualization highlighted different migration patterns of the Passer Domesticus species, between the months of May and September, fluctuations in both maximum and minimum temperatures indicate dynamic environmental conditions, therefore, we can conclude that temperature changes influence in the behavior and movement of Passer domesticus, which could affect breeding, feeding or migration activities.
@@ -335,7 +340,7 @@ Understanding these relationships through visualization offers valuable insights
  
  <li> <strong> How does this model compare to the first one in terms of metrics? </strong></li>
 
-The seconf model (93.04% accuracy) demonstrates significantly superior performance in terms of accuracy compared to the first model (60% accuracy). The difference in metrics suggests that the second model is more effective at making accurate predictions on the test data compared to the first model.
+The second model (93.04% accuracy) demonstrates significantly superior performance in terms of accuracy compared to the first model (60% accuracy). The difference in metrics suggests that the second model is more effective at making accurate predictions on the test data compared to the first model.
 </div>
   </div>
 <div>
